@@ -1,0 +1,15 @@
+name: test
+on:
+  pull_request:
+    types: [opened]  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ryubb/change-notion-page-status@v0.0.1
+      with:
+        notion-key: ${{ secrets.NOTION_KEY }}
+        status-property: "Status"
+        status-value: "In progress"
