@@ -4,6 +4,7 @@ const core = require("@actions/core");
 const notion = require("./notion");
 const util = require("./util");
 
+const notionKey = core.getInput("notion-key");
 const statusProperty = core.getInput("status-property");
 const statusValue = core.getInput("status-value");
 
@@ -24,7 +25,7 @@ async function run() {
     return;
   }
 
-  await notion.updatePage(pageId, statusProperty, statusValue);
+  await notion.updatePage(notionKey, pageId, statusProperty, statusValue);
   console.log("ページの更新が完了しました");
 }
 
