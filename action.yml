@@ -1,0 +1,19 @@
+name: 'change-notion-page-status'
+description: ''
+inputs:
+  notion-key:
+    description: "githubのenvを通して、notion keyを送ってください。"
+    required: true
+  status-property:
+    description: "CI実行後に変更したいステータスのプロパティ名"
+    required: true
+    default: "Status"
+  status-value:
+    description: 'CI実行後に変更したいステータスを指定してください。'
+    required: true
+outputs:
+  test-output: # id of output
+    description: 'test output'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
