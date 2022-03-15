@@ -1,4 +1,4 @@
-name: merged_and_status_done
+name: sample_pr_merged
 on:
   pull_request:
     branches:

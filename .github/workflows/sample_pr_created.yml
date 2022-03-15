@@ -1,4 +1,4 @@
-name: test
+name: sample_pr_created
 on:
   pull_request:
     types: [opened]  
