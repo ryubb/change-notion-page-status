@@ -1,6 +1,6 @@
 {
   "name": "change-notion-page-status",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
   "author": "ryubb",
   "license": "MIT",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/slackapi/slack-github-action.git"
+    "url": "git+https://github.com/ryubb/change-notion-page-status.git"
   },
   "engines": {
     "node": ">=12.0.0",

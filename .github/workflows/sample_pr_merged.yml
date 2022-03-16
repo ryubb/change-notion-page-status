@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: ryubb/change-notion-page-status@v0.0.2
+    - uses: ryubb/change-notion-page-status@v0.0.3
       with:
         notion-key: ${{ secrets.NOTION_KEY }}
         status-property: "Status"
