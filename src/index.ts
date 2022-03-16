@@ -25,8 +25,14 @@ async function run() {
     return;
   }
 
-  await notion.updatePage(notionKey, pageId, statusProperty, statusValue);
-  console.log("ページの更新が完了しました");
+  try {
+    await notion.updatePage(notionKey, pageId, statusProperty, statusValue);
+    console.log("ページの更新が完了しました");
+  } catch (error) {
+    if (error instanceof Error) {
+      core.setFailed(error.message);
+    }
+  }
 }
 
 run();

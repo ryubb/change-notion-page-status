@@ -22,8 +22,7 @@ async function updatePage(
       },
     });
   } catch (error: typeof APIResponseError) {
-    console.error("errorが発生しました");
-    console.error(error.body);
+    throw new Error("pageの更新に失敗しました。");
   }
 }
 
