@@ -12,7 +12,7 @@ const notionUrlHook = core.getInput("notion-url-hook");
 async function run() {
   const pullRequestBody = github.context.payload.pull_request.body;
   const pattern = new RegExp(
-    `^${notionUrlHook}\\s*(https:\\/\\/www.notion.so\\/.+)`,
+    `${notionUrlHook}\\s*(https:\\/\\/www.notion.so\\/.+)`,
   );
   const result = pattern.exec(pullRequestBody);
   const notionPageUrl = result && result[1];
