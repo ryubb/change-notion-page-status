@@ -7,10 +7,13 @@ const util = require("./util");
 const notionKey = core.getInput("notion-key");
 const statusProperty = core.getInput("status-property");
 const statusValue = core.getInput("status-value");
+const notionUrlHook = core.getInput("notion-url-hook");
 
 async function run() {
   const pullRequestBody = github.context.payload.pull_request.body;
-  const pattern = /^#notion\s*(https:\/\/www.notion.so\/.+)/;
+  const pattern = new RegExp(
+    `^${notionUrlHook}\\s*(https:\\/\\/www.notion.so\\/.+)`,
+  );
   const result = pattern.exec(pullRequestBody);
   const notionPageUrl = result && result[1];
 

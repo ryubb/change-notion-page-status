@@ -11,6 +11,10 @@ inputs:
   status-value:
     description: 'CI実行後に変更したいステータスを指定してください。'
     required: true
+  notion-url-hook:
+    description: "NotionのURLをPRの内容から取得するために、必要な文字列です。"
+    required: true
+    default: "#notion"
 runs:
   using: 'node12'
   main: 'dist/index.js'
