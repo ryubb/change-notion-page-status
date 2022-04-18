@@ -1,5 +1,5 @@
 name: 'change-notion-page-status'
-description: ''
+description: 'Notionのページステータスを変更するアクションです。'
 inputs:
   notion-key:
     description: "githubのenvを通して、notion keyを送ってください。"
